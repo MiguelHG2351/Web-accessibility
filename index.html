@@ -106,26 +106,29 @@
 </main>
 
     <footer class="contact-section">
-      <div class="header">Contacto</div>
+      <h2 class="header-title">Contacto</h2>
+      <p class="intro">Puedes usar el formulario que sigue para mandarme un mensaje</p>
       <form class="form-container">
         <label class="form-label">
-          Nombre<input type="text" /> <br />
+          Nombre<input type="text" id="name" />
+          <br />
         </label>
+        <span id="name-error" aria-live="assertive"></span>
         <label class="form-label">
-          Correo<input type="text" /> <br />
+          Correo<input id="email" type="text" /> <br />
         </label>
         <label class="message-input">Mensaje <textarea cols="30" rows="10"></textarea><br /></label>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
 
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
-        <h2 class="header-title">
+        <h2 class="header-title" id="modal-header" tabindex="0">
           Ejemplo de un proyecto mio
         </h2>
-        <img class="modal-project-image" src="images/project1.png"/>
+        <img class="modal-project-image" alt="Este es un proyecto mio" src="images/project1.png"/>
         <button class="model-btn">Cerrar</butto>
       </div>
     </div>
