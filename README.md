@@ -54,3 +54,15 @@ Que no dependan de un mouse o teclado
 - Motoras:
     - Varilla bucal
     - Switch 
+
+# Pruebas manuales (extensiones):
+
+NoCoffe vision simulator
+
+Otra Herramienta
+
+[Otra forma de usarlo](https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202020-06-19%20a%20las%2018.29.01-24983e60-d28a-4867-9ff4-f6a7f88b357f.jpg)
+
+# Pruebas manuales (teclado):
+
+
