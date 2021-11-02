@@ -65,4 +65,31 @@ Otra Herramienta
 
 # Pruebas manuales (teclado):
 
+El tabulador :v
 
+# Lectores de pantalla
+
+- NVDA - Mozilla Firefox
+
+- JAWS - Internet Explorer
+
+- Voice Over - Safari
+
+- ChromeVox - Google Chrome
+
+# HTML semantico
+
+
+[Otra forma de usarlo](https://www.jungledisk.com/blog/content/images/blog/div-soup-vs-semantic-html.png)
+
+# ARIA
+
+ARIA ( Accessible Rich Internet Applications ): Un conjunto de atributos especiales para accesibilidad que pueden añadirse a cualquier etiqueta, pero especialmente adaptado a HTML.
+
+Fue creado por la W3C, lo crearon para que podamos comunicar cambios especiales en nuestras aplicaciones.
+
+** Atributos de ARIA: **
+
+Roles
+Propiedades
+Estados

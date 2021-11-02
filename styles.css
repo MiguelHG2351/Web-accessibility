@@ -47,14 +47,19 @@ img {
   --verde: #7ac943;
 }
 
-body {
+body, header, section {
   align-items: center;
   background-color: var(--gris-medio);
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .header {
+  width: 100%;
+}
+
+.header-title {
   color: var(--blanco);
   font-family: var(--main-font);
   font-size: 55px;
@@ -68,7 +73,6 @@ body {
 }
 
 .header-img {
-  background: center / contain no-repeat url(./images/juliana.jpeg);
   border-radius: 50%;
   border: 1px solid var(--gris-oscuro);
   box-shadow: 8px 16px 32px 0px var(--shadow);
@@ -78,10 +82,15 @@ body {
 }
 
 .navigation {
-  color: var(--blanco);
-  cursor: pointer;
+  width: 100%;
   display: flex;
   justify-content: space-around;
+}
+.navigation-list {
+  display: flex;
+  justify-content: space-around;
+  color: var(--blanco);
+  cursor: pointer;
   margin: 24px 0;
   width: 50%;
 }
@@ -89,11 +98,16 @@ body {
 .nav-item {
   align-items: center;
   border-radius: 5px;
-  display: flex;
+  display: inline-flex;
   font-family: var(--secondary-font);
   height: 30px;
   justify-content: center;
   width: 33%;
+}
+
+.nav-item a {
+  color: #eee;
+  text-decoration: none;
 }
 
 .nav-item:hover {
@@ -130,6 +144,10 @@ body {
   width: 1500px;
 }
 
+.project-container li {
+  display: inline-block;
+}
+
 .project {
   border-radius: 5px;
   border: 2px solid #000;
@@ -138,31 +156,12 @@ body {
   margin: 0 8px;
   transition: all 0.2s ease-in-out;
   width: 250px;
+  object-fit: cover;
 }
 
 .project:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-.project1 {
-  background: center / cover no-repeat url(./images/project1.png);
-}
-
-.project2 {
-  background: center / cover no-repeat url(./images/project2.png);
-}
-
-.project3 {
-  background: center / cover no-repeat url(./images/project3.png);
-}
-
-.project4 {
-  background: center / cover no-repeat url(./images/project4.png);
-}
-
-.project5 {
-  background: center / cover no-repeat url(./images/project5.png);
 }
 
 .arrow {
@@ -212,6 +211,8 @@ input {
 }
 
 .send-button {
+  font-size: 1rem;
+  cursor: pointer;
   align-items: center;
   background-color: var(--verde);
   border-radius: 5px;
