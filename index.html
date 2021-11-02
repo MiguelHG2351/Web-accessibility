@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link">
+      Saltar al contenido
+    </a>
     <header class="header">
       <img src="images/juliana.jpeg" alt="Juliana Gomez" class="header-img"/>
       <div class="header-title">Juliana Gomez</div>
@@ -24,9 +27,9 @@
         </ul>
       </nav>
     </header>
-<main>
-  <section class="intro">
-    <p>
+<main id="main">
+  <section>
+    <p class="intro">
       Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y tambien crear
       cosas lindas para la web 😍 Después de estudiar comunicación social y
       ciencia política en la universidad, trabajé varios años en mercadeo
@@ -38,22 +41,28 @@
     </p>
     <ul class="social-media">
       <li>
-        <a href="https://twitter.com/gmzjuliana" target="_blank"
-          ><img src="images/twitter.png"
-          alt="Twitter"
-        /></a>
-      </>
+        <a href="https://twitter.com/gmzjuliana" target="_blank">
+            <img src="images/twitter.png"
+            alt="Twitter"
+            />
+            <p class="social-link-text" title="Twitter">Twitter</p>
+        </a>
+      </li>
       <li>
         <a href="https://github.com/gmzjuliana" target="_blank"
-          ><img src="images/github-logo.png"
-          alt="Github"
-        /></a>
+            ><img src="images/github-logo.png"
+            alt="Github"
+          />
+          <p class="social-link-text" title="GitHub">GitHub</p>
+        </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
           ><img src="images/linkedin.png"
           alt="Linkedin"
-        /></a>
+        />
+        <p class="social-link-text" title="Linkedin">Linkedin</p>
+      </a>
       </li>
     </ul>
   </section>
@@ -61,7 +70,7 @@
   <section>
     <h2 class="header-title">Mis Proyectos</h2>
     <div class="carousel">
-      <div class="arrow arrow-left"></div>
+      <div class="arrow arrow-left" aria-label="backward button"></div>
       <div class="window">
         <ul class="project-container">
           <li>
@@ -81,17 +90,17 @@
           </li>
           <li>
             <button>
-              <img class="project project4" src="images/project4.png" alt="Aplicación con Redux">
+              <img class="project project4" src="images/project4.png" aria-hidden="true" alt="Aplicación con Redux">
             </button>
           </li>
           <li>
             <button>
-              <img class="project project5" src="images/project5.png" alt="Aplicación con Apollo">
+              <img class="project project5" src="images/project5.png" aria-hidden="true" alt="Aplicación con Apollo">
             </button>
           </li>
         </ul>
       </div>
-      <div class="arrow arrow-right"></div>
+      <div class="arrow arrow-right" aria-label="forward button"></div>
     </div>
   </section>
 </main>
@@ -99,12 +108,17 @@
     <footer class="contact-section">
       <div class="header">Contacto</div>
       <form class="form-container">
-        Nombre<input type="text" /> <br />
-        Correo<input type="text" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
+        <label class="form-label">
+          Nombre<input type="text" /> <br />
+        </label>
+        <label class="form-label">
+          Correo<input type="text" /> <br />
+        </label>
+        <label class="message-input">Mensaje <textarea cols="30" rows="10"></textarea><br /></label>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
+
     <div class="notification">El formulario fue enviado sin errores</div>
     <div class="modal-container">
       <div class="modal">

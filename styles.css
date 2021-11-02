@@ -55,6 +55,20 @@ body, header, section {
   max-width: 100%;
 }
 
+.skip-link {
+  height: 0;
+}
+
+.skip-link:focus, .skip-link:active {
+  background-color: var(--verde);
+  border-radius: 5px;
+  color: var(--gris-oscuro);
+  font-family: var(--secondary-font);
+  height: auto;
+  margin: 16px 0 8px;
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
 }
@@ -114,9 +128,14 @@ body, header, section {
   background-color: var(--verde);
 }
 
+.nav-item:hover a {
+  color: var(--gris-oscuro);
+}
+
 .intro {
   margin: 0 196px;
   font-family: var(--secondary-font);
+  color: var(--blanco);
 }
 
 .social-media {
@@ -125,6 +144,20 @@ body, header, section {
   justify-content: space-around;
   margin: 32px auto 0;
   width: 20%;
+}
+
+.social-media li a {
+  display: flex;
+  align-items: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-family: var(--secondary-font);
+}
+
+.social-link-text {
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .carousel {
@@ -198,6 +231,14 @@ body, header, section {
   display: flex;
   flex-direction: column;
   width: 30%;
+}
+
+footer {
+  font-family: var(--secondary-font);
+}
+
+.form-label {
+  color: var(--blanco);
 }
 
 .message-input input {

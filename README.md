@@ -93,3 +93,41 @@ Fue creado por la W3C, lo crearon para que podamos comunicar cambios especiales 
 Roles
 Propiedades
 Estados
+
+# Estados:
+
+Comunican cambios por ejemplo si un checkbox esta seleccionado, etc.
+
+el aria-hidden evita que lea el contenido de un elemento
+
+**El lector no lee esto, puede ser útil para elementos de un carousel que tiene visible x imagenes**
+```html
+aria-hidden="true"
+```
+
+# Skip Links: 
+
+Son enlaces de página internos que ayudan a la navegación por la página actual, en lugar de a páginas completamente nuevas. Es super util para los usuarios con teclado.
+
+Es obligatorio hace parte de la guide 1 del criterio 2.4.1 Bypass Blocks del Principio Navigable.
+
+(Referencia)[https://www.w3.org/TR/WCAG20-TECHS/G1.html]
+
+```html
+<a href="#main" class="skip-link">Skip to main content</a>
+```
+```css
+.skip-link {
+  height: 0;
+}
+
+.skip-link:focus, .skip-link:active {
+  background-color: var(--verde);
+  border-radius: 5px;
+  color: var(--gris-oscuro);
+  font-family: var(--secondary-font);
+  height: auto;
+  margin: 16px 0 8px;
+  text-decoration: none;
+}
+```
