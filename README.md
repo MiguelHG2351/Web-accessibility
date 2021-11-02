@@ -131,3 +131,15 @@ Es obligatorio hace parte de la guide 1 del criterio 2.4.1 Bypass Blocks del Pri
   text-decoration: none;
 }
 ```
+
+# Manejando focos del teclado
+
+Tabindex: Indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado.
+
+Valores de Tabindex:
+
+- Valor negativo(-1): El elemento debe ser enfocado, pero no debe de ser accesible a través de la navegación.
+
+- Valor positivo (>0): Debe poder ser enfocado y su orden relativo es definido por el valor del atributo.
+
+- Valor de 0: Debe ser enfocado y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo es definido por convención de la plataforma.

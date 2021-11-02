@@ -57,6 +57,7 @@ body, header, section {
 
 .skip-link {
   height: 0;
+  display: inline-block;
 }
 
 .skip-link:focus, .skip-link:active {
@@ -65,8 +66,10 @@ body, header, section {
   color: var(--gris-oscuro);
   font-family: var(--secondary-font);
   height: auto;
+  padding: .5rem;
   margin: 16px 0 8px;
   text-decoration: none;
+  outline: 3px solid var(--verde);
 }
 
 .header {
@@ -100,6 +103,7 @@ body, header, section {
   display: flex;
   justify-content: space-around;
 }
+
 .navigation-list {
   display: flex;
   justify-content: space-around;
@@ -124,11 +128,17 @@ body, header, section {
   text-decoration: none;
 }
 
-.nav-item:hover {
+.nav-item:hover, .nav-item:hover a {
+  background-color: var(--verde);
+  color: var(--gris-oscuro);
+}
+
+.nav-item:focus-within {
   background-color: var(--verde);
 }
 
-.nav-item:hover a {
+.nav-item a:focus {
+  outline: none;
   color: var(--gris-oscuro);
 }
 
@@ -143,7 +153,6 @@ body, header, section {
   display: flex;
   justify-content: space-around;
   margin: 32px auto 0;
-  width: 20%;
 }
 
 .social-media li a {
@@ -152,6 +161,15 @@ body, header, section {
   color: var(--blanco);
   text-decoration: none;
   font-family: var(--secondary-font);
+}
+
+.social-media li a:focus {
+  outline: none;
+}
+
+.social-media li:focus-within {
+  outline: 3px solid var(--verde);
+  padding: .5rem;
 }
 
 .social-link-text {
@@ -168,7 +186,8 @@ body, header, section {
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 815px;
+  padding: .5rem;
 }
 
 .project-container {
@@ -181,7 +200,17 @@ body, header, section {
   display: inline-block;
 }
 
-.project {
+.project-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.project-btn:focus-within {
+  outline: 3px solid var(--verde);
+}
+
+.project-image {
   border-radius: 5px;
   border: 2px solid #000;
   display: inline-block;
@@ -219,6 +248,10 @@ body, header, section {
   border-radius: 50%;
 }
 
+.arrow:focus {
+  outline: 3px solid var(--verde);
+}
+
 .contact-section {
   align-items: center;
   background-color: var(--gris-oscuro);
@@ -237,21 +270,25 @@ footer {
   font-family: var(--secondary-font);
 }
 
-.form-label {
+.form-label, .message-input {
   color: var(--blanco);
 }
 
-.message-input input {
+.message-input textarea {
   height: 150px;
-  margin-bottom: 16px;
-}
-
-input {
-  outline: none;
   width: 100%;
 }
 
-.send-button {
+input {
+  width: 100%;
+  padding: .5rem;
+}
+
+input:focus, textarea:focus {
+  outline: 3px solid var(--verde);
+}
+
+.send-button, .model-btn {
   font-size: 1rem;
   cursor: pointer;
   align-items: center;
@@ -265,6 +302,11 @@ input {
   margin-bottom: 48px;
   width: 150px;
   margin-left: auto;
+  outline: none;
+}
+
+.send-button:focus-within {
+  outline: 3px solid var(--blanco);
 }
 
 .notification {
@@ -303,12 +345,11 @@ input {
   height: 700px;
   justify-content: center;
   position: fixed;
-  top: 15%;
+  top: 5%;
   width: 700px;
 }
 
 .modal-project-image {
-  background: center / cover no-repeat url(./images/project1.png);
   border-radius: 5px;
   border: 2px solid #000;
   height: 400px;
